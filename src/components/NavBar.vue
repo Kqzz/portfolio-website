@@ -22,7 +22,7 @@ export default {};
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 1.5em;
+  font-size: 110%;
   margin-right: 10%;
   margin-left: 10%;
 }

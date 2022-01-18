@@ -13,21 +13,54 @@ export default {};
         I'm a <span style="color: #b363cc">software developer</span> working
         with Go & Python
       </p>
-      <a class="projects btn" href="#projects">Projects</a>
-      <a class="contact btn" href="#contact">Contact</a>
+      <div class="content-btns">
+        <a class="projects btn" href="#projects">Projects</a>
+        <a class="contact btn" href="#contact">Contact</a>
+      </div>
     </div>
-    <div>
-      <div class="image"></div>
-    </div>
+    <div class="image"></div>
   </div>
 </template>
 
 <style scoped>
 .content h1 {
-  font-size: 7rem;
+  font-size: 10vw;
   font-weight: bold;
   margin-bottom: 35px;
   margin-top: 24px;
+}
+
+.content-btns {
+  /* We first create a flex layout context */
+  display: flex;
+
+  /* Then we define the flow direction
+     and if we allow the items to wrap
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   */
+  flex-flow: row wrap;
+
+  justify-content: left;
+}
+
+/* Medium screens */
+@media all and (max-width: 970px) {
+  .content-btns {
+    /* When on medium sized screens, we center it by evenly distributing empty space around items */
+    flex-direction: column;
+  }
+}
+
+@media all and (max-width: 565px) {
+  .image {
+    visibility: hidden;
+  }
+}
+
+.btn {
+  margin-bottom: 1rem;
 }
 
 p {
@@ -41,7 +74,7 @@ p {
   justify-content: space-between;
   margin-right: 10%;
   margin-left: 10%;
-  margin-bottom: 10rem;
+  margin-bottom: 20rem;
 }
 
 .subhead {
@@ -50,11 +83,12 @@ p {
 }
 
 .image {
-  width: 32rem;
-  height: 40rem;
+  max-width: 32rem;
+  width: 100%;
+  height: 600px;
   background: url("../assets/hero-image.gif");
   background-repeat: no-repeat;
-  background-size: 200%;
+  background-size: 300%;
   background-position-x: -130px;
   filter: drop-shadow(4px 4px 7px rgba(0, 0, 0, 0.4));
   border-radius: 100px 0px 22px;

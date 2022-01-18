@@ -28,6 +28,8 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 #app {
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: "Poppins";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -36,6 +38,7 @@ export default {
   margin-right: 0px;
   margin-left: 0px;
   scroll-behavior: smooth;
+  padding-bottom: 3rem;
 }
 
 a {
@@ -54,6 +57,7 @@ a:hover {
   border-radius: 15px;
   margin-right: 1em;
   border: 2px solid #181618;
+  text-align: center;
   color: #181618;
 }
 </style>

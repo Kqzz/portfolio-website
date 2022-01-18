@@ -113,14 +113,14 @@ export default {
 }
 
 h1 {
-  font-size: 7rem;
+  font-size: 500%;
   font-weight: bold;
   margin-bottom: 3rem;
 }
 
 .project h2,
 .project .dates {
-  font-size: 3.5rem;
+  font-size: 300%;
   font-weight: bold;
   color: #181618;
   -webkit-text-stroke-width: 1px;
